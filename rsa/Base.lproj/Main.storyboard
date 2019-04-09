@@ -706,11 +706,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="rsa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="293"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Otm-Ph-9RH">
-                                <rect key="frame" x="18" y="233" width="57" height="17"/>
+                                <rect key="frame" x="18" y="256" width="57" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Key pair:" id="qnU-L3-mue">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -719,7 +719,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwt-JC-B7F">
-                                <rect key="frame" x="20" y="203" width="130" height="22"/>
+                                <rect key="frame" x="20" y="226" width="130" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Gpp-Bq-PIt"/>
                                 </constraints>
@@ -730,7 +730,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ioc-Ad-F1h">
-                                <rect key="frame" x="20" y="171" width="130" height="22"/>
+                                <rect key="frame" x="20" y="194" width="130" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="4wz-fJ-ISE"/>
                                 </constraints>
@@ -741,7 +741,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Usv-XI-Fc6">
-                                <rect key="frame" x="192" y="138" width="274" height="97"/>
+                                <rect key="frame" x="192" y="161" width="274" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="274" id="gFv-5n-EFu"/>
                                     <constraint firstAttribute="height" constant="97" id="w3Y-m1-aZQ"/>
@@ -753,7 +753,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-NP-Iwz">
-                                <rect key="frame" x="192" y="11" width="274" height="94"/>
+                                <rect key="frame" x="192" y="34" width="274" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="274" id="efQ-Js-Ved"/>
                                     <constraint firstAttribute="height" constant="94" id="w1R-bi-GOp"/>
@@ -765,7 +765,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qUz-HD-osI">
-                                <rect key="frame" x="192" y="243" width="188" height="17"/>
+                                <rect key="frame" x="192" y="266" width="188" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Text to encrypt/decrypted text" id="F70-6M-PQa">
                                     <font key="font" metaFont="system"/>
@@ -774,7 +774,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U93-x1-o5e">
-                                <rect key="frame" x="190" y="113" width="186" height="17"/>
+                                <rect key="frame" x="190" y="136" width="186" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Encrypted text/text to decrypt" id="fBZ-71-OOc">
                                     <font key="font" metaFont="system"/>
@@ -783,7 +783,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXK-GG-DwR">
-                                <rect key="frame" x="42" y="77" width="87" height="32"/>
+                                <rect key="frame" x="42" y="100" width="87" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Encrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AcQ-7r-55W">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -794,19 +794,28 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PR-lj-K9g">
-                                <rect key="frame" x="41" y="44" width="89" height="32"/>
+                                <rect key="frame" x="41" y="67" width="89" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Decrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KCF-W9-6nU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-ln-kWi">
+                                <rect key="frame" x="18" y="9" width="444" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="msg" id="KQx-ny-cod">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="666.5"/>
         </scene>
     </scenes>
 </document>
