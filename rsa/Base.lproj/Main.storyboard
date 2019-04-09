@@ -779,8 +779,16 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-ln-kWi">
+                                <rect key="frame" x="18" y="15" width="30" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="msg" id="KQx-ny-cod">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IXK-GG-DwR">
-                                <rect key="frame" x="42" y="118" width="87" height="32"/>
+                                <rect key="frame" x="42" y="98" width="87" height="32"/>
                                 <buttonCell key="cell" type="push" title="Encrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AcQ-7r-55W">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -790,28 +798,20 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2PR-lj-K9g">
-                                <rect key="frame" x="41" y="85" width="89" height="32"/>
+                                <rect key="frame" x="41" y="65" width="89" height="32"/>
                                 <buttonCell key="cell" type="push" title="Decrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KCF-W9-6nU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-ln-kWi">
-                                <rect key="frame" x="18" y="20" width="30" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="msg" id="KQx-ny-cod">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2PR-lj-K9g" secondAttribute="trailing" constant="356" id="3Wb-mx-xCn"/>
                             <constraint firstAttribute="trailing" secondItem="Usv-XI-Fc6" secondAttribute="trailing" constant="14" id="6dO-Gr-7n3"/>
-                            <constraint firstItem="jAf-ln-kWi" firstAttribute="top" secondItem="2PR-lj-K9g" secondAttribute="bottom" constant="55" id="74z-rr-WEa"/>
+                            <constraint firstItem="jAf-ln-kWi" firstAttribute="top" secondItem="2PR-lj-K9g" secondAttribute="bottom" constant="40" id="74z-rr-WEa"/>
                             <constraint firstAttribute="trailing" secondItem="jwt-JC-B7F" secondAttribute="trailing" constant="330" id="FmR-oi-rmO"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Otm-Ph-9RH" secondAttribute="trailing" constant="407" id="FrY-mr-CXh"/>
-                            <constraint firstItem="IXK-GG-DwR" firstAttribute="top" secondItem="Ioc-Ad-F1h" secondAttribute="bottom" constant="66" id="GJy-ah-8ry"/>
+                            <constraint firstItem="IXK-GG-DwR" firstAttribute="top" secondItem="Ioc-Ad-F1h" secondAttribute="bottom" constant="86" id="GJy-ah-8ry"/>
                             <constraint firstItem="Ioc-Ad-F1h" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="HVh-YA-qeD"/>
                             <constraint firstItem="U93-x1-o5e" firstAttribute="top" secondItem="Usv-XI-Fc6" secondAttribute="bottom" constant="8" id="I7N-1q-8qy"/>
                             <constraint firstItem="Usv-XI-Fc6" firstAttribute="top" secondItem="qUz-HD-osI" secondAttribute="bottom" constant="8" id="IsW-Yu-Glm"/>
