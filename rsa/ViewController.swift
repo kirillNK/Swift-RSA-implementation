@@ -40,7 +40,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var msgLabel: NSTextField!
     
     @IBAction func encryptBtn(_ sender: NSButton) {
-        //print(arrayOfSumbol)
+        //print(arrayOfSymbol)
     }
     @IBAction func decryptBtn(_ sender: NSButton) {
     }
@@ -197,8 +197,19 @@ class ViewController: NSViewController {
     
     let testString = "Super secret message!"
     
-    lazy var arrayOfSumbol: Array = testString.splitedBy(length: 1)
+    lazy var arrayOfSymbol: Array = testString.splitedBy(length: 1)
     
+    var decodedArrayOfSymbol = [String]()
+    
+    func isStringContainSymbol(arrayOfSymbol: String) -> [String] {
+        let stringLength = arrayOfSymbol.count
+        for i in 0...stringLength {
+//            if (symbolArray.contains(arrayOfSymbol[i])) {
+//                decodedArrayOfSymbol +=
+//            }
+        }
+        return decodedArrayOfSymbol
+    }
     
     
 }
