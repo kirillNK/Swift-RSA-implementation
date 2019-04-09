@@ -10,12 +10,8 @@ import Cocoa
 import Foundation
 
 class ViewController: NSViewController {
-    var primeCount: Int = 0
-    var notPrimeCount: Int = 0
-    @IBAction func btnPressed(button: NSButton) {
-        print("open key: \(paramE) and \(paramN)\nsecret key: \(paramD) and \(paramN)")
-    }
     
+    //system method
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,7 +19,7 @@ class ViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        self.view.window?.title = "RSA enc and dec"
+        self.view.window?.title = "RSA encryption and decryption"
         self.view.window?.styleMask.remove(NSWindow.StyleMask.resizable)
     }
 
@@ -33,7 +29,26 @@ class ViewController: NSViewController {
         }
     }
     
+    //action and outlet
+    @IBOutlet weak var publicKey: NSTextField!
+    @IBOutlet weak var privateKey: NSTextField!
     
+    @IBOutlet weak var t2eOrDecTex: NSTextField!
+    @IBOutlet weak var encTextOrT2D: NSTextField!
+    
+    
+    @IBOutlet weak var msgLabel: NSTextField!
+    
+    @IBAction func encryptBtn(_ sender: NSButton) {
+    }
+    @IBAction func decryptBtn(_ sender: NSButton) {
+    }
+    
+    
+    //main code
+    
+    var primeCount: Int = 0
+    var notPrimeCount: Int = 0
     
     func isPrimeFermaMethod(number: Int) -> Bool {
         
@@ -103,11 +118,11 @@ class ViewController: NSViewController {
         return (tempP,tempQ)
     }
     
-    
-    
     lazy var params = checkPQ(p: tempP, q: tempQ)
     lazy var p = params.0
     lazy var q = params.1
+    
+    
     
     func generateN() -> Int {
         var n: Int = 0
@@ -116,9 +131,9 @@ class ViewController: NSViewController {
         return n
     }
     
-    
-    
     lazy var paramN = generateN()
+    
+    
     
     func getEuler() -> Int {
         var euler: Int = 0
@@ -127,9 +142,9 @@ class ViewController: NSViewController {
         return euler
     }
     
-    
-    
     lazy var euler = getEuler()
+    
+    
     
     func isCoPrime(num1: Int, num2: Int) -> Bool {
         if (num1 == num2) {
@@ -174,8 +189,13 @@ class ViewController: NSViewController {
     
     lazy var paramE = generateE()
     
+    
+    
     //alphabet arrays
-    let symbolArray: Array = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "э", "ю", "я", "А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Э", "Ю", "Я", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "&", "?", "-", "+", "=", "~"]
+    let symbolArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "э", "ю", "я", "А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Э", "Ю", "Я", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "&", "?", "-", "+", "=", "~"]
+    
+    
+    
     
 }
 

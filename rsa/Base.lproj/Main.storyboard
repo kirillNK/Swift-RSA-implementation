@@ -739,18 +739,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Usv-XI-Fc6">
-                                <rect key="frame" x="192" y="179" width="274" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="274" id="gFv-5n-EFu"/>
-                                    <constraint firstAttribute="height" constant="97" id="w3Y-m1-aZQ"/>
-                                </constraints>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ba0-Rg-Wfm">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-NP-Iwz">
                                 <rect key="frame" x="192" y="52" width="274" height="94"/>
                                 <constraints>
@@ -779,11 +767,15 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-ln-kWi">
-                                <rect key="frame" x="18" y="15" width="30" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="msg" id="KQx-ny-cod">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Usv-XI-Fc6">
+                                <rect key="frame" x="192" y="179" width="274" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="gFv-5n-EFu"/>
+                                    <constraint firstAttribute="height" constant="97" id="w3Y-m1-aZQ"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ba0-Rg-Wfm">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -794,7 +786,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="btnPressedWithButton:" target="XfG-lQ-9wD" id="BEW-xQ-T30"/>
+                                    <action selector="encryptBtn:" target="XfG-lQ-9wD" id="CWF-ra-YV7"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2PR-lj-K9g">
@@ -803,7 +795,18 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="decryptBtn:" target="XfG-lQ-9wD" id="0Pq-GU-GCC"/>
+                                </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-ln-kWi">
+                                <rect key="frame" x="18" y="15" width="30" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="msg" id="KQx-ny-cod">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2PR-lj-K9g" secondAttribute="trailing" constant="356" id="3Wb-mx-xCn"/>
@@ -838,6 +841,13 @@
                             <constraint firstItem="jAf-ln-kWi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="xgo-mk-Ng8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="encTextOrT2D" destination="1Pp-NP-Iwz" id="6cK-Qw-JgB"/>
+                        <outlet property="msgLabel" destination="jAf-ln-kWi" id="bct-MM-MHn"/>
+                        <outlet property="privateKey" destination="Ioc-Ad-F1h" id="b2P-dW-fso"/>
+                        <outlet property="publicKey" destination="jwt-JC-B7F" id="pJt-Xb-O0u"/>
+                        <outlet property="t2eOrDecTex" destination="Usv-XI-Fc6" id="Br9-BG-XNx"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
