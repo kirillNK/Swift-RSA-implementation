@@ -51,45 +51,11 @@ class ViewController: NSViewController {
     var primeCount: Int = 0
     var notPrimeCount: Int = 0
     
-    func isPrimeFermaMethod(number: Int) -> Bool {
-        
-        if (number <= 1) { return false }
-        if (number == 2){ return true }
-        if (number % 2 == 0){ return false }
-        
-        let tempNumber: Double = Double(number)
-        let boundary: Int = Int(round(tempNumber.squareRoot()))
-        
-        for i in stride(from: 3, to: (boundary + 1), by: 2) { if (number % i == 0) { return false } }
-        
-        return true
-    }
+    
     
     
 
-    func generateP() -> Int {
-        var p: Int = 0
-        p = Int.random(in: 1...10000)
-        if isPrimeFermaMethod(number: p) {
-            return p
-        } else {
-            return 0
-            //TODO: add message
-        }
-    }
     
-    
-    
-    func generateQ() -> Int {
-        var q: Int = 0
-        q = Int.random(in: 1...10000)
-        if isPrimeFermaMethod(number: q) {
-            return q
-        } else {
-            return 0
-            //TODO: add message
-        }
-    }
     
     lazy var tempP = generateP()
     lazy var tempQ = generateQ()
@@ -125,12 +91,7 @@ class ViewController: NSViewController {
     
     
     
-    func generateN() -> Int {
-        var n: Int = 0
-        n = p * q
-        
-        return n
-    }
+    
     
     lazy var paramN = generateN()
     
@@ -147,30 +108,11 @@ class ViewController: NSViewController {
     
     
     
-    func isCoPrime(num1: Int, num2: Int) -> Bool {
-        if (num1 == num2) {
-            return num1 == 1
-        } else {
-            if (num1 > num2) {
-                return isCoPrime(num1: (num1 - num2), num2: num2)
-            } else {
-                return isCoPrime(num1: (num2 - num1), num2: num1)
-            }
-        }
-    }
     
     
     
-    func generateD() -> Int { //check func
-        var d: Int = 0
-        d = Int.random(in: 1...10000)
-        if isCoPrime(num1: d, num2: euler) {
-            return d
-        } else {
-            generateD()
-        }
-        return d
-    }
+    
+    
     
     lazy var paramD: Int = generateD()
     
@@ -193,16 +135,16 @@ class ViewController: NSViewController {
     
     
     //alphabet arrays
-    let symbolArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "э", "ю", "я", "А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Э", "Ю", "Я", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "&", "?", "-", "+", "=", "~"]
+    let symbolsArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "э", "ю", "я", "А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Э", "Ю", "Я", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "&", "?", "-", "+", "=", "~"]
     
     let testString = "Super secret message!"
     
-    lazy var arrayOfSymbol: Array = testString.splitedBy(length: 1)
+    lazy var arrayOfSymbols: Array = testString.splitedBy(length: 1)
     
-    var decodedArrayOfSymbol = [String]()
+    var decodedArrayOfSymbols = [String]()
     
-    func isStringContainSymbol(arrayOfSymbol: String) -> [String] {
-        let stringLength = arrayOfSymbol.count
+    func isStringContainSymbols(arrayOfSymbols: String) -> [String] {
+        let stringLength = arrayOfSymbols.count
         for i in 0...stringLength {
 //            if (symbolArray.contains(arrayOfSymbol[i])) {
 //                decodedArrayOfSymbol +=
