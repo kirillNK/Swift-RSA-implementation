@@ -9,6 +9,7 @@
 import Cocoa
 
 class Generator: NSObject {
+    
     let checker = PrimeChecker()
     
     func generateP() -> Int {
@@ -36,22 +37,37 @@ class Generator: NSObject {
     }
     
     
-    func generateN() -> Int {
+    func generateN(p: Int, q: Int) -> Int {
         var n: Int = 0
         n = p * q
         
         return n
     }
     
-    
-    func generateD() -> Int { //check func
+    let primeChecker = CoPrimeChecker()
+    func generateD(euler: Int) -> Int { //check func
         var d: Int = 0
         d = Int.random(in: 1...10000)
-        if isCoPrime(num1: d, num2: euler) {
+        if primeChecker.isCoPrime(num1: d, num2: euler) {
             return d
         } else {
-            generateD()
+            //generateD()
         }
         return d
     }
+    
+    
+    func generateE(paramD: Int, euler: Int) -> Int {
+        var e: Int = 0
+        
+        for i in 1...1000 {
+            while (i * paramD % euler) != 1 {
+                break
+            }
+            e = i
+        }
+        return e
+    }
+    
+    
 }

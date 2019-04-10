@@ -48,63 +48,20 @@ class ViewController: NSViewController {
     
     //main code
     
-    var primeCount: Int = 0
-    var notPrimeCount: Int = 0
-    
     
     
     
 
     
-    
-    lazy var tempP = generateP()
-    lazy var tempQ = generateQ()
-    
-    
-    
-    func checkPQ(p: Int, q: Int) -> (Int, Int) {
-        var flagP = false
-        var flagQ = false
-        
-        while flagP == false {
-            if tempP == 0 {
-                tempP = generateP()
-            } else {
-                flagP = true
-            }
-        }
-        
-        while flagQ == false {
-            if tempQ == 0 {
-                tempQ = generateQ()
-            } else {
-                flagQ = true
-            }
-        }
-
-        return (tempP,tempQ)
-    }
-    
-    lazy var params = checkPQ(p: tempP, q: tempQ)
-    lazy var p = params.0
-    lazy var q = params.1
-    
-    
-    
-    
-    
-    lazy var paramN = generateN()
-    
-    
-    
-    func getEuler() -> Int {
-        var euler: Int = 0
-        euler = (p - 1) * (q - 1)
-        
-        return euler
-    }
-    
-    lazy var euler = getEuler()
+    let generator = Generator()
+    lazy var tempP = generator.generateP()
+    lazy var tempQ = generator.generateQ()
+    //lazy var paramN = generator.generateN()
+    //lazy var params = checkPQ(p: tempP, q: tempQ)
+//    let PQParams = PQChecker()
+//    let params = PQChecker.checkPQ(tempP, tempQ)
+//    lazy var p = params.0
+//    lazy var q = params.1
     
     
     
@@ -114,23 +71,25 @@ class ViewController: NSViewController {
     
     
     
-    lazy var paramD: Int = generateD()
     
     
     
-    func generateE() -> Int {
-        var e: Int = 0
-        
-        for i in 1...1000 {
-            while (i * paramD % euler) != 1 {
-                break
-            }
-            e = i
-        }
-        return e
-    }
     
-    lazy var paramE = generateE()
+    
+    
+    
+    
+    
+    
+    
+    
+    //lazy var paramD = generator.generateD(euler: <#Int#>)
+    
+    
+    
+    
+    
+    //lazy var paramE = generator.generateE()
     
     
     
@@ -150,7 +109,7 @@ class ViewController: NSViewController {
 //                decodedArrayOfSymbol +=
 //            }
         }
-        return decodedArrayOfSymbol
+        return decodedArrayOfSymbols
     }
     
     
@@ -173,4 +132,3 @@ extension String {
     }
     
 }
-

@@ -9,6 +9,7 @@
 import Cocoa
 
 class CoPrimeChecker: NSObject {
+    
     func isCoPrime(num1: Int, num2: Int) -> Bool {
         if (num1 == num2) {
             return num1 == 1

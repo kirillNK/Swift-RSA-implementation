@@ -10,6 +10,8 @@
 		ED4F2BD0225E06990058A76F /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F2BCF225E06990058A76F /* Generator.swift */; };
 		ED4F2BD2225E06F90058A76F /* PrimeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F2BD1225E06F90058A76F /* PrimeChecker.swift */; };
 		ED4F2BD4225E07AE0058A76F /* CoPrimeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F2BD3225E07AE0058A76F /* CoPrimeChecker.swift */; };
+		ED4F2BD6225E50930058A76F /* PQChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F2BD5225E50930058A76F /* PQChecker.swift */; };
+		ED4F2BD8225E53390058A76F /* EulerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F2BD7225E53390058A76F /* EulerGenerator.swift */; };
 		EDFEB7E9225717E1007D0539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFEB7E8225717E1007D0539 /* AppDelegate.swift */; };
 		EDFEB7EB225717E1007D0539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFEB7EA225717E1007D0539 /* ViewController.swift */; };
 		EDFEB7ED225717E2007D0539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDFEB7EC225717E2007D0539 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		ED4F2BCF225E06990058A76F /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		ED4F2BD1225E06F90058A76F /* PrimeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChecker.swift; sourceTree = "<group>"; };
 		ED4F2BD3225E07AE0058A76F /* CoPrimeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoPrimeChecker.swift; sourceTree = "<group>"; };
+		ED4F2BD5225E50930058A76F /* PQChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PQChecker.swift; sourceTree = "<group>"; };
+		ED4F2BD7225E53390058A76F /* EulerGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulerGenerator.swift; sourceTree = "<group>"; };
 		EDFEB7E5225717E1007D0539 /* rsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rsa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFEB7E8225717E1007D0539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDFEB7EA225717E1007D0539 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +65,10 @@
 			children = (
 				EDFEB7E8225717E1007D0539 /* AppDelegate.swift */,
 				EDFEB7EA225717E1007D0539 /* ViewController.swift */,
+				ED4F2BD5225E50930058A76F /* PQChecker.swift */,
 				ED4F2BD1225E06F90058A76F /* PrimeChecker.swift */,
 				ED4F2BCF225E06990058A76F /* Generator.swift */,
+				ED4F2BD7225E53390058A76F /* EulerGenerator.swift */,
 				ED4F2BD3225E07AE0058A76F /* CoPrimeChecker.swift */,
 				EDFEB7EC225717E2007D0539 /* Assets.xcassets */,
 				EDFEB7EE225717E2007D0539 /* Main.storyboard */,
@@ -142,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4F2BD6225E50930058A76F /* PQChecker.swift in Sources */,
 				ED4F2BD4225E07AE0058A76F /* CoPrimeChecker.swift in Sources */,
+				ED4F2BD8225E53390058A76F /* EulerGenerator.swift in Sources */,
 				ED4F2BD0225E06990058A76F /* Generator.swift in Sources */,
 				EDFEB7EB225717E1007D0539 /* ViewController.swift in Sources */,
 				EDFEB7E9225717E1007D0539 /* AppDelegate.swift in Sources */,

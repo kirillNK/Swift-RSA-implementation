@@ -9,6 +9,7 @@
 import Cocoa
 
 class PrimeChecker: NSObject {
+    
     func isPrimeFermaMethod(number: Int) -> Bool {
         
         if (number <= 1) { return false }
