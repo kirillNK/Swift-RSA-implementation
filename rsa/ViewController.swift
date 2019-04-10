@@ -47,50 +47,17 @@ class ViewController: NSViewController {
     
     
     //main code
-    
-    
-    
-    
-
-    
     let generator = Generator()
     lazy var tempP = generator.generateP()
     lazy var tempQ = generator.generateQ()
-    //lazy var paramN = generator.generateN()
-    //lazy var params = checkPQ(p: tempP, q: tempQ)
-//    let PQParams = PQChecker()
-//    let params = PQChecker.checkPQ(tempP, tempQ)
-//    lazy var p = params.0
-//    lazy var q = params.1
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //lazy var paramD = generator.generateD(euler: <#Int#>)
-    
-    
-    
-    
-    
-    //lazy var paramE = generator.generateE()
-    
+    var tempEuler = EulerGenerator()
+    let PQParams = PQChecker()
+    lazy var params = PQParams.checkPQ(p: tempP, q: tempQ)
+    lazy var p = params.0
+    lazy var q = params.1
+    lazy var euler = tempEuler.getEuler(p: p, q: q)
+    lazy var paramD = generator.generateD(euler: euler)
+    lazy var paramE = generator.generateE(paramD: paramD, euler: euler)
     
     
     //alphabet arrays
