@@ -40,7 +40,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var msgLabel: NSTextField!
     
     @IBAction func encryptBtn(_ sender: NSButton) {
-        let charIndexArray = ConvertCharToIndex(arrayOfSymbols: arrayOfSymbols)
+        let charIndexArray = converter.ConvertCharToIndex(arrayOfSymbols: arrayOfSymbols, alphabetArray: alphabetArray)
         //print(testString.count)
         print(testString)
         print(charIndexArray)
@@ -75,19 +75,7 @@ class ViewController: NSViewController {
     lazy var arrayOfSymbols = testString.splitedBy(length: 1)
 
     
-    func ConvertCharToIndex(arrayOfSymbols: [String]) -> [String] {
-        var charToIndexArray = [String]()
-        for elementIndex in 0...arrayOfSymbols.count - 1 {
-            let charInArrayOfSymbols: String = arrayOfSymbols[elementIndex]
-            
-            if alphabetArray.contains(charInArrayOfSymbols) {
-                let dataToAppend: Int = alphabetArray.firstIndex(of: charInArrayOfSymbols) ?? 0
-                charToIndexArray.append(String(dataToAppend))
-            }
-        }
-        
-        return charToIndexArray
-    }
+    let converter = textConverter()
     
     
 }
