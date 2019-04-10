@@ -11,29 +11,25 @@ import Cocoa
 class Generator: NSObject {
     
     let checker = PrimeChecker()
+    let isCoPrimeChecker = CoPrimeChecker()
+    let iterationCount = 100
     
     func generateP() -> Int {
-        var p: Int = 0
-        p = Int.random(in: 1...10000)
-        if checker.isPrimeFermaMethod(number: p) {
-            return p
-        } else {
-            return 0
-            //TODO: add message
+        var p = Int.random(in: 1...iterationCount)
+        while checker.isPrimeFermaMethod(number: p) == false {
+            p = Int.random(in: 1...iterationCount)
         }
+        return p
     }
     
     
     
     func generateQ() -> Int {
-        var q: Int = 0
-        q = Int.random(in: 1...10000)
-        if checker.isPrimeFermaMethod(number: q) {
-            return q
-        } else {
-            return 0
-            //TODO: add message
+        var q = Int.random(in: 1...iterationCount)
+        while checker.isPrimeFermaMethod(number: q) == false {
+            q = Int.random(in: 1...iterationCount)
         }
+        return q
     }
     
     
@@ -44,23 +40,20 @@ class Generator: NSObject {
         return n
     }
     
-    let primeChecker = CoPrimeChecker()
-    func generateD(euler: Int) -> Int { //check func
-        var d: Int = 0
-        d = Int.random(in: 1...10000)
-        if primeChecker.isCoPrime(num1: d, num2: euler) {
-            return d
-        } else {
-            //generateD()
+    
+    func generateD(euler: Int) -> Int {
+        var d = Int.random(in: 1...iterationCount)
+        while isCoPrimeChecker.isCoPrime(num1: d, num2: euler) {
+            d = Int.random(in: 1...iterationCount)
         }
+        
         return d
     }
     
     
     func generateE(paramD: Int, euler: Int) -> Int {
         var e: Int = 0
-        
-        for i in 1...1000 {
+        for i in 1...iterationCount {
             while (i * paramD % euler) != 1 {
                 break
             }
@@ -68,6 +61,5 @@ class Generator: NSObject {
         }
         return e
     }
-    
     
 }

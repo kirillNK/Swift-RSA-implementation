@@ -104,7 +104,7 @@ class ViewController: NSViewController {
     
     func isStringContainSymbols(arrayOfSymbols: String) -> [String] {
         let stringLength = arrayOfSymbols.count
-        for i in 0...stringLength {
+        for _ in 0...stringLength {
 //            if (symbolArray.contains(arrayOfSymbol[i])) {
 //                decodedArrayOfSymbol +=
 //            }
