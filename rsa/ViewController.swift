@@ -40,7 +40,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var msgLabel: NSTextField!
     
     @IBAction func encryptBtn(_ sender: NSButton) {
-        let charIndexArray = charToIndex(arrayOfSymbols: arrayOfSymbols)
+        let charIndexArray = ConvertCharToIndex(arrayOfSymbols: arrayOfSymbols)
         //print(testString.count)
         print(testString)
         print(charIndexArray)
@@ -75,37 +75,19 @@ class ViewController: NSViewController {
     lazy var arrayOfSymbols = testString.splitedBy(length: 1)
 
     
-    func charToIndex(arrayOfSymbols: [String]) -> [String] {
-        var charIndexArray = [String]()
+    func ConvertCharToIndex(arrayOfSymbols: [String]) -> [String] {
+        var charToIndexArray = [String]()
         for elementIndex in 0...arrayOfSymbols.count - 1 {
-            var charInArrayOfSymbols: String = arrayOfSymbols[elementIndex]
+            let charInArrayOfSymbols: String = arrayOfSymbols[elementIndex]
             
             if alphabetArray.contains(charInArrayOfSymbols) {
-                var dataToAppend: Int = alphabetArray.firstIndex(of: charInArrayOfSymbols) ?? 0
-                charIndexArray.append(String(dataToAppend))
+                let dataToAppend: Int = alphabetArray.firstIndex(of: charInArrayOfSymbols) ?? 0
+                charToIndexArray.append(String(dataToAppend))
             }
         }
         
-        return charIndexArray
+        return charToIndexArray
     }
     
-    
-}
-
-extension String {
-    
-    public func splitedBy(length: Int) -> [String] {
-        
-        var result = [String]()
-        
-        for i in stride(from: 0, to: self.count, by: length) {
-            let endIndex = self.index(self.endIndex, offsetBy: -i)
-            let startIndex = self.index(endIndex, offsetBy: -length, limitedBy: self.startIndex) ?? self.startIndex
-            result.append(String(self[startIndex..<endIndex]))
-        }
-        
-        return result.reversed()
-        
-    }
     
 }
