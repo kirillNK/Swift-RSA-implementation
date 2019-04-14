@@ -41,10 +41,12 @@ class ViewController: NSViewController {
     
     @IBAction func encryptBtn(_ sender: NSButton) {
         let charIndexArray = converter.ConvertCharToIndex(arrayOfSymbols: arrayOfSymbols, alphabetArray: alphabetArray)
-        //print(testString.count)
-        print(testString)
-        print(charIndexArray)
-        //print(decodedArrayOfSymbols.count)
+        //print(charIndexArray)
+        
+        
+        let intIndexArray = converter.ConvertIndexToChar(arrayOfInts: charIndexArray, alphabetArray: alphabetArray)
+        //print("\n")
+        //print(intIndexArray)
     }
     @IBAction func decryptBtn(_ sender: NSButton) {
     }

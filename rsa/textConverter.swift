@@ -25,8 +25,15 @@ class textConverter: NSObject {
     }
     
     
-    func ConvertIndexToChar(arrayOfSymbols: [String], alphabetArray: [String]) -> [String] {
+    func ConvertIndexToChar(arrayOfInts: [String], alphabetArray: [String]) -> [String] {
         var IndexToCharArray = [String]()
+        
+        for elementIndex in 0...arrayOfInts.count - 1 {
+            let tempData: Int? = Int(arrayOfInts[elementIndex])
+            
+            IndexToCharArray.append(alphabetArray[tempData ?? 0])
+        }
+        
         
         return IndexToCharArray
     }
